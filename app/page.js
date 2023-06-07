@@ -1,9 +1,74 @@
+"use client"
 import Image from 'next/image'
+import { useState } from 'react'
+import { Plus_Jakarta_Sans } from 'next/font/google'
+
+const pjs = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  weight: ['200', '300', '400', '500', '600', '700', '800'],
+  display: 'swap'
+})
 
 export default function Home() {
+  const [toggle, setToggle] = useState(false)
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
+    <main className="flex min-h-screen flex-col items-center justify-between bg-white">
+      <nav className="bg-transparent w-full z-20 top-0 left-0 absolute">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a href="#" className="flex items-center">
+            <img src="/logo.png" className="h-8 mr-3" alt="Logo" />
+          </a>
+          <div className="flex md:order-2">
+            <button data-collapse-toggle="navbar-sticky" type="button" className="inline-flex items-center p-2 text-sm text-white rounded-lg md:hidden focus:outline-none focus:ring-1 focus:ring-gray-200" aria-controls="navbar-sticky" aria-expanded="false" onClick={() => setToggle(!toggle)}>
+              <span className="sr-only">Open main menu</span>
+              <svg className="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+            </button>
+          </div>
+          <div className={`items-center justify-between w-full md:flex md:w-auto md:order-1 ${toggle ? '' : 'hidden'}`} id="navbar-sticky">
+            <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
+              <li>
+                <a href="#home" className="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0 " aria-current="page">Home</a>
+              </li>
+              <li>
+                <a href="#" className="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0 ">About</a>
+              </li>
+              <li>
+                <a href="#" className="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0 ">Services</a>
+              </li>
+              <li>
+                <a href="#" className="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0 ">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <img src="/banner.jpg" alt="" />
+      <section id='home' className='text-black px-[90px]'>
+        <div className='py-[60px]'>
+          <h1 className={`text-4xl text-center mb-5 font-bold ${pjs.className}`}>Our Background</h1>
+          <p className={`text-center font-medium text-sm ${pjs.className}`}>SOME adalah brand apparel yang menghadirkan keindahan mitologi dunia melalui desain-desain kreatif. Dalam setiap koleksi kami, kami menampilkan dewa-dewa dari berbagai budaya dengan menyoroti sisi baik dan buruk mereka. Melalui penggabungan estetika modern dengan simbolisme kuno, kami menciptakan produk berkualitas tinggi yang menggambarkan kekuatan dan keindahan dewa-dewa. Temukan cerita yang kuat di balik setiap produk SOME yang Anda miliki, dan bergabunglah dalam menjelajahi dunia yang menakjubkan ini bersama kami.</p>
+        </div>
+      </section>
+      <div className='px-[90px] py-10'>
+        <div className='flex flex-row justify-between gap-24 items-center'>
+          <div>
+            <img src="/02.png" alt="" className='max-w-xl' />
+          </div>
+          <div className='text-black'>
+            <h1 className={`text-[40px] font-bold ${pjs.className} mb-[30px] max-w-sm`}>Eco Friendly Packaging</h1>
+            <p className={`text-base leading-6 ${pjs.className} font-light`}>Kami menggunakan bahan-bahan yang bertanggung jawab secara lingkungan, kami memastikan bahwa kemasan kami memiliki dampak minimal terhadap planet kita. Kami menggunakan bahan daur ulang atau dapat terurai untuk kotak dan kemasan kami. Dengan berkomitmen untuk eco-friendly packaging, kami berharap dapat memberikan kontribusi positif terhadap perlindungan lingkungan dan menginspirasi pelanggan kami untuk mengadopsi praktek yang serupa.</p>
+          </div>
+        </div>
+      </div>
+      <div className='bg-[#FAFAFA] text-black py-[54px] w-full'>
+        <div className={`grid grid-cols-2 gap-10`}>
+          <h1 className={`text-5xl text-center mb-5 font-bold ${pjs.className}`}>Bringing You the Elements of Style</h1>
+          <p>Circle back minimize backwards overflow yet product need full resourcing and support from a cross-functional team in order to be built, maintained, and evolved.</p>
+        </div>
+
+      </div>
+      {/* <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
         <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
           Get started by editing&nbsp;
           <code className="font-mono font-bold">app/page.js</code>
@@ -107,7 +172,7 @@ export default function Home() {
             Instantly deploy your Next.js site to a shareable URL with Vercel.
           </p>
         </a>
-      </div>
+      </div> */}
     </main>
   )
 }
