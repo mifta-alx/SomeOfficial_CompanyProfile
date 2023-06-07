@@ -61,12 +61,12 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className='bg-[#FAFAFA] text-black py-[54px] w-full'>
-        <div className={`grid grid-cols-2 gap-10`}>
-          <h1 className={`text-5xl text-center mb-5 font-bold ${pjs.className}`}>Bringing You the Elements of Style</h1>
+      <div className='bg-[#FAFAFA] text-black py-[54px] w-full px-[90px]'>
+        <div className={`flex flex-row gap-12 items-center`}>
+          <h1 className={`text-5xl text-left mb-5 font-bold ${pjs.className} max-w-md`}>Bringing You the Elements of Style</h1>
           <p>Circle back minimize backwards overflow yet product need full resourcing and support from a cross-functional team in order to be built, maintained, and evolved.</p>
         </div>
-
+          <div className='h-1 flex my-[50px] w-full'/>
       </div>
       {/* <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
         <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
