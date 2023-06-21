@@ -130,14 +130,6 @@ export default function Home() {
           <p className={`${pjs.className} font-normal md:font-medium text-[#2E2E2E] md:text-base text-sm`} data-aos="fade-top" data-aos-duration="600" data-aos-delay="400">Kami menggabungkan seni dan mitologi dalam setiap desain kami. Setiap artikel kami menciptakan pengalaman unik dengan menggambarkan dewa-dewa dari berbagai mitologi, memadukan simbolisme dan keindahan dalam setiap detailnya.</p>
         </div>
       </div>
-      <amp-ad width="100vw" height="320"
-        type="adsense"
-        data-ad-client="ca-pub-4074960792155900"
-        data-ad-slot="7798703895"
-        data-auto-format="rspv"
-        data-full-width="">
-        <div overflow=""></div>
-      </amp-ad>
       <div className='flex md:py-10 py-6 px-4 md:px-[90px] flex-col gap-[30px] w-full'>
         <div className='flex flex-row justify-between items-center'>
           <h1 className={`${pjs.className} font-bold text-2xl md:text-4xl text-black`} data-aos="fade-right" data-aos-duration="500" data-aos-delay="300">Our Products</h1>

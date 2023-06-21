@@ -12,8 +12,16 @@ export default function RootLayout({ children }) {
     <html lang="en" className='scroll-smooth'>
       <Script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4074960792155900"
         crossorigin="anonymous" />
-      <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
-      <body>{children}</body>
+      <body>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4074960792155900"
+          crossorigin="anonymous"></script>
+        <ins class="adsbygoogle block"
+          data-ad-client="ca-pub-4074960792155900"
+          data-ad-slot="7798703895"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+          (adsbygoogle = window.adsbygoogle || []).push({ });
+        {children}</body>
     </html>
   )
 }
