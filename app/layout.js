@@ -14,7 +14,6 @@ export default function RootLayout({ children }) {
         crossorigin="anonymous" />
       <Script
         id="Adsense-id" async
-        onError={(e) => { console.error("Script failed to load", e); }}
         strategy="afterInteractive"
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4074960792155900"
         crossorigin="anonymous"
