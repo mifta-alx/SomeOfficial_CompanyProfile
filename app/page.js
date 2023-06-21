@@ -161,6 +161,20 @@ export default function Home() {
           }
         </div>
       </div>
+      <div>
+        Adsense
+        <ins
+          class="adsbygoogle"
+          style={{ display: "block" }}
+          data-ad-client="ca-pub-987************676"
+          data-ad-slot="776****95"
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        > </ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({ });
+        </script>
+      </div>
       <footer className='bg-[#2E2E2E] py-8 md:py-10 px-4 md:px-[90px] w-full flex flex-col md:gap-10 gap-4'>
         <img src="/logo.png" className="h-9 w-20" alt="Logo" data-aos="fade-right" data-aos-duration="500" data-aos-delay="100" />
         <div className='flex md:flex-row flex-col justify-between items-center'>
