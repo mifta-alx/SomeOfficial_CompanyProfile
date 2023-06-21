@@ -124,7 +124,8 @@ export default function Home() {
         </div>
       </div>
       <div className='py-[10px] w-full'>
-        <img src="/window.png" alt="" className='w-full object-cover md:h-fit h-60' data-aos="zoom-out" data-aos-duration="800" data-aos-delay="500" />
+        <Image width={1200}
+          height={800} src="/window.png" alt="" className='w-screen object-cover md:h-fit h-60' data-aos="fade-down" data-aos-duration="800" data-aos-delay="500" />
         <div className='py-6 px-4 md:py-[10px] md:mt-10 md:px-[90px]'>
           <p className={`${pjs.className} font-normal md:font-medium text-[#2E2E2E] md:text-base text-sm`} data-aos="fade-top" data-aos-duration="600" data-aos-delay="400">Kami menggabungkan seni dan mitologi dalam setiap desain kami. Setiap artikel kami menciptakan pengalaman unik dengan menggambarkan dewa-dewa dari berbagai mitologi, memadukan simbolisme dan keindahan dalam setiap detailnya.</p>
         </div>
@@ -143,7 +144,8 @@ export default function Home() {
           {
             dataImage.slice(currentIndex, currentIndex + 2).map((data, index) => {
               return (
-                <img key={index} src={data.url} alt="" className='h-96 w-full object-cover' data-aos="zoom-out" data-aos-duration="500" data-aos-delay="100" />
+                <img width={1200}
+                  height={800} key={index} src={data.url} alt="" className='h-96 w-full object-cover' data-aos="zoom-out" data-aos-duration="500" data-aos-delay="100" />
               )
             })
           }
@@ -152,14 +154,15 @@ export default function Home() {
           {
             dataImage.slice(currentIndex, currentIndex + 1).map((data, index) => {
               return (
-                <img key={index} src={data.url} alt="" className='h-96 w-full object-cover' data-aos="zoom-out" data-aos-duration="500" data-aos-delay="100" />
+                <Image width={1200}
+                  height={800} key={index} src={data.url} alt="" className='h-96 w-full object-cover' data-aos="zoom-out" data-aos-duration="500" data-aos-delay="100" />
               )
             })
           }
         </div>
       </div>
       <footer className='bg-[#2E2E2E] py-8 md:py-10 px-4 md:px-[90px] w-full flex flex-col md:gap-10 gap-4'>
-        <img src="/logo.png" className="h-9 w-fit" alt="Logo" data-aos="fade-right" data-aos-duration="500" data-aos-delay="100" />
+        <img src="/logo.png" className="h-9 w-20" alt="Logo" data-aos="fade-right" data-aos-duration="500" data-aos-delay="100" />
         <div className='flex md:flex-row flex-col justify-between items-center'>
           <div className='max-w-2xl' data-aos="fade-right" data-aos-duration="500" data-aos-delay="100">
             <h1 className={`md:text-5xl text-3xl ${pjs.className} font-semibold`}>Rewrite the <span className={`${myFont.className}`}>Myth</span> and repair the legend of the <span className={`${myFont.className}`}>Gods.</span></h1>
@@ -200,7 +203,7 @@ export default function Home() {
                 <li><Icon icon="uil:facebook" /></li>
               </ul>
             </div>
-            <p className={`text-xs ${pjs.className} text-center font-medium`}>Some Official | Copyright Ⓒ 2023 | All Rights reserved</p>
+            <p className={`text-xs ${pjs.className} text-center font-medium text-white.`}>Some Official | Copyright Ⓒ 2023 | All Rights reserved</p>
           </div>
         </div>
       </footer>
