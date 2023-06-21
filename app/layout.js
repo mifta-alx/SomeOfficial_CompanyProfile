@@ -12,6 +12,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className='scroll-smooth'>
       <Script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4074960792155900"
         crossorigin="anonymous" />
+      <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
       <body>{children}</body>
     </html>
   )
