@@ -1,23 +1,25 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 import Script from 'next/script';
+import Head from 'next/head';
 
-export const metadata = {
-  title: 'Some Official',
-  description: 'Some Official',
-}
+// export const metadata = {
+//   title: 'Some Official',
+//   description: 'Some Official',
+// }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className='scroll-smooth'>
-      <Script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4074960792155900"
-        crossorigin="anonymous" />
-      <Script
-        id="Adsense-id" async
-        strategy="afterInteractive"
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4074960792155900"
-        crossorigin="anonymous"
-      />
+      <head>
+        <title>Some Official</title>
+        <meta name="description" content="Some Official" />
+        <meta property="og:title" content="Some Official" />
+        <meta property="og:description" content="Some Official" />
+        <meta property="og:url" content="https://someofficial.vercel.app/" />
+        <meta property="og:type" content="website" />
+        <link rel="icon" href="/icon.svg" />
+      </head>
       <body>{children}</body>
     </html>
   )
