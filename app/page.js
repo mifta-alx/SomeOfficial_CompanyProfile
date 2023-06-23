@@ -101,7 +101,8 @@ export default function Home() {
       <div className='md:px-[90px] md:py-10 py-4'>
         <div className='flex md:flex-row flex-col justify-between lg:gap-24 items-center'>
           <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500" >
-            <img src="/02.png" alt="" className='lg:max-w-xl max-w-xs' />
+            <Image width={1200}
+              height={800} src="/02.png" alt="" className='lg:max-w-xl max-w-xs' />
           </div>
           <div className='text-[#2E2E2e] px-10'>
             <h1 className={`md:text-[40px] text-3xl font-bold ${pjs.className} mb-[30px] md:max-w-sm md:text-left text-center`} data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500">Eco Friendly Packaging</h1>
@@ -115,12 +116,16 @@ export default function Home() {
           <p className={`${pjs.className} font-normal md:text-base text-sm`} data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">Circle back minimize backwards overflow yet product need full resourcing and support from a cross-functional team in order to be built, maintained, and evolved.</p>
         </div>
         <div className='hidden md:grid grid-cols-2 gap-10 pt-4 md:pt-[50px] border-t border-[#2E2E2E]' data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
-          <img src="/duo_shirt.jpg" alt="" className='max-h-56 w-full object-cover' />
-          <img src="/women_shirt.jpg" alt="" className='max-h-56 w-full object-cover' />
+          <Image width={1200}
+            height={800} src="/duo_shirt.jpg" alt="" className='max-h-56 w-full object-cover' />
+          <Image width={1200}
+            height={800} src="/women_shirt.jpg" alt="" className='max-h-56 w-full object-cover' />
         </div>
         <div className='grid md:hidden grid-rows-2 gap-4 pt-4 border-t border-[#2E2E2E]' data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
-          <img src="/duo_shirt.jpg" alt="" className='max-h-56 w-full object-cover' />
-          <img src="/women_shirt.jpg" alt="" className='max-h-56 w-full object-cover' />
+          <Image width={1200}
+            height={800} src="/duo_shirt.jpg" alt="" className='max-h-56 w-full object-cover' />
+          <Image width={1200}
+            height={800} src="/women_shirt.jpg" alt="" className='max-h-56 w-full object-cover' />
         </div>
       </div>
       <div className='py-[10px] w-full'>
@@ -144,7 +149,7 @@ export default function Home() {
           {
             dataImage.slice(currentIndex, currentIndex + 2).map((data, index) => {
               return (
-                <img width={1200}
+                <Image width={1200}
                   height={800} key={index} src={data.url} alt="" className='h-96 w-full object-cover' data-aos="zoom-out" data-aos-duration="500" data-aos-delay="100" />
               )
             })
